@@ -1,20 +1,15 @@
-# Verificación y entrega
+# Verificación y entrega de Savia
 
-## Reproduce la operación
+## Prueba sobre una copia aislada
 
-- Prepara datos sintéticos con las mismas formas y casos límite que los datos reales. Usa un perfil local con su propia base y configuración. Si existe una demo, comprueba que sus usuarios y registros queden aislados del entorno real.
-- Registra el entorno, el comando, el resultado y la evidencia que viste. Cuando un servicio, un dispositivo o un destino no estén disponibles, marca el caso como pendiente de comprobar.
-- Prueba la tarea con el dispositivo y perfil que usará la persona. Para un lector, ejecuta el recorrido de escaneo y Enter. Para un evento, usa un teléfono para el registro público y una cuenta de acceso para confirmar la entrada. Para una plataforma interna, combina un perfil autorizado con otro que deba recibir una denegación.
+- Confirma qué proceso y base utiliza la prueba. Prepara datos sintéticos en una base y directorios temporales. Cuando cambies consultas, transacciones o migraciones, prueba en el motor del entorno objetivo además de la prueba rápida que corresponda. Para migraciones, ensaya tanto la instalación nueva como la actualización desde una versión anterior representativa.
+- Usa los comandos de la estación cuando estén disponibles. `savia check quick` cubre cambios acotados, `savia check frontend` el frente web y `savia check backend` la API. Para aislar un defecto, ejecuta el archivo o caso pertinente de `services/api/tests/` con pytest, o la prueba web del flujo en `apps/web/tests/`. Cierra con `git diff --check`.
+- En Playwright, espera estados observables de la aplicación. Verifica que el usuario puede completar el recorrido con su perfil y que el cambio sigue presente después de recargar. Reproduce también la denegación con un perfil de otro alcance cuando se hayan tocado permisos.
 
-## Empaqueta y publica
+## Promueve y documenta con evidencia
 
-1. Crea la entrega a partir de una lista explícita de archivos. Incluye las instrucciones de arranque y una plantilla de configuración con valores ficticios. Usa un catálogo vacío o un conjunto de demostración generado.
-2. Inspecciona el contenido de archivos comprimidos e instaladores y, cuando haya Git, revisa también el árbol y el historial que vas a subir. Busca credenciales, rutas privadas, inventarios, identificadores de personas, exportaciones, bases, respaldos y archivos de entorno. Un archivo ignorado puede seguir presente en commits anteriores.
-3. Reproduce la instalación o compilación desde la entrega con un perfil limpio. Comprueba el primer arranque, dónde quedan los datos y qué ocurre al aplicar una actualización. Para una aplicación web, comprueba desde fuera del entorno local que la URL sirve la versión esperada y que conserva el esquema y los permisos correctos.
-4. Si se autorizó una publicación, confirma cuenta, repositorio y visibilidad. Verifica después la rama y el commit que quedaron publicados. Para una entrega pública, comprueba el acceso sin sesión.
+Consulta `docs/operations/environments-and-releases.md` y `docs/operations/deployment.md` para el destino autorizado. Identifica commit, configuración necesaria, cambio de esquema, prueba en el ambiente previo y procedimiento de reversa. Verifica que la reversa sea compatible con los datos que puedan haberse guardado después de promover.
 
-## Documenta para decisión y operación
+Para presentar Savia, prepara una ficha por capacidad con el problema operativo, puesto, decisión, evidencia y estado en el entorno evaluado. Usa pantallas o resultados con datos sintéticos cuando el material se comparta. Distingue una capacidad comprobada en el clon, una validada en piloto y una habilitada en producción. Una cifra de ahorro, escalabilidad o cobertura necesita método de medición o una hipótesis identificada.
 
-Separa lo comprobado, lo disponible con configuración adicional y lo que sigue en propuesta. Para cada capacidad importante, vincula la pantalla, código, prueba o configuración que la demuestra. Explica a quién beneficia y qué trabajo cambia. Cualquier cifra de ahorro, capacidad o adopción requiere una medición o una hipótesis identificada como tal.
-
-Entrega a operación el procedimiento de primer uso, los permisos necesarios, el responsable de actualizar datos y los pasos de recuperación que sí se ensayaron. Si una parte de la entrega depende de una prueba física o de producción, identifica esa prueba y su resultado esperado.
+La autorización para publicar esta skill cubre sus instrucciones. Una entrega del código, los datos, las evidencias o la infraestructura de Savia requiere el destino y alcance autorizados para esa entrega.

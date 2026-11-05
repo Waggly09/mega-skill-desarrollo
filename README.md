@@ -1,19 +1,17 @@
-# Mega Skill de Desarrollo
+# Mega Skill de Savia
 
-Skill en español para llevar una herramienta interna desde el flujo de trabajo hasta una entrega que se pueda probar. Incluye guías para plataformas con varias sedes, catálogos Windows con escáner y Excel, y eventos con prerregistro y rifa.
+Skill en español para desarrollar, revisar y documentar Savia. Guía a Codex desde la tarea de un puesto hasta el cambio probado en su módulo, con referencias para operación industrial, experiencia de usuario, acceso a datos y liberaciones.
 
-## Uso en Codex
-
-Clona el repositorio y copia la carpeta `mega-skill-desarrollo` a `.agents/skills/` dentro del proyecto donde quieras usarla. Conserva `SKILL.md` y `references/` juntos. Invoca `$mega-skill-desarrollo` desde ese proyecto.
+Clona este repositorio y copia la carpeta `mega-skill-desarrollo` a `.agents/skills/` del clon de desarrollo de Savia. Conserva `SKILL.md` y `references/` juntos. Abre Savia en Codex e invoca `$mega-skill-desarrollo`.
 
 ```text
-Usa $mega-skill-desarrollo para importar mi catálogo de Excel.
-Conserva los ceros iniciales, muestra los duplicados y verifica el flujo de escaneo con Enter.
+Usa $mega-skill-desarrollo para corregir la exportación del historial.
+Verifica selección mixta, permisos por planta y el PDF con datos ficticios.
 ```
 
 ```text
-Usa $mega-skill-desarrollo para verificar que una exportación respeta los permisos por sede.
-Prepara una prueba local con registros ficticios y reporta qué queda por verificar antes de publicar.
+Usa $mega-skill-desarrollo para preparar una presentación de Savia.
+Vincula cada capacidad a una pantalla, prueba o documento y marca qué se comprobó en el entorno evaluado.
 ```
 
-El repositorio contiene instrucciones reutilizables para el agente. La implementación y los datos pertenecen al proyecto donde se aplique la skill.
+Este repositorio distribuye la skill. Para ejecutar Savia se requiere acceso a su propio clon.
