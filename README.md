@@ -1,17 +1,18 @@
-# Mega Skill de Savia
+# Mega Skill de Desarrollo Industrial
 
-Skill en español para desarrollar, revisar y documentar Savia. Guía a Codex desde la tarea de un puesto hasta el cambio probado en su módulo, con referencias para operación industrial, experiencia de usuario, acceso a datos y liberaciones.
+Skill en español para organizar y desarrollar plataformas internas de operación industrial. Ayuda a definir módulos, responsables de datos y prioridades, y a convertir un proceso de planta en un flujo con permisos, trazabilidad, pruebas y un piloto verificable. Sirve para proyectos nuevos y sistemas existentes.
 
-Clona este repositorio y copia la carpeta `mega-skill-desarrollo` a `.agents/skills/` del clon de desarrollo de Savia. Conserva `SKILL.md` y `references/` juntos. Abre Savia en Codex e invoca `$mega-skill-desarrollo`.
+Clona este repositorio o descarga su ZIP. Copia la carpeta de la skill como `.agents/skills/mega-skill-desarrollo/` dentro del proyecto donde quieras usarla. Conserva `SKILL.md` y `references/` juntos. Abre el proyecto en Codex e invoca `$mega-skill-desarrollo`.
 
 ```text
-Usa $mega-skill-desarrollo para corregir la exportación del historial.
-Verifica selección mixta, permisos por planta y el PDF con datos ficticios.
+Usa $mega-skill-desarrollo para organizar un sistema para dos plantas.
+Empecemos con recepción de materiales, control de calidad y liberación a almacén.
+Entrega el mapa de módulos, los responsables de los datos y el backlog del piloto.
 ```
 
 ```text
-Usa $mega-skill-desarrollo para preparar una presentación de Savia.
-Vincula cada capacidad a una pantalla, prueba o documento y marca qué se comprobó en el entorno evaluado.
+Usa $mega-skill-desarrollo para agregar órdenes de mantenimiento a mi plataforma.
+Reutiliza el catálogo de equipos y verifica permisos por planta y el historial de cada orden.
 ```
 
-Este repositorio distribuye la skill. Para ejecutar Savia se requiere acceso a su propio clon.
+La [guía de organización y arquitectura](references/organizacion-y-arquitectura.md) incluye una ficha de capacidad y un ejemplo de piloto.

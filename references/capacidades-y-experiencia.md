@@ -1,16 +1,15 @@
-# Capacidades y experiencia de Savia
+# Capacidades y experiencia
 
-Para una capacidad nueva, parte de `docs/product/industrial-enterprise-operating-system.md` y `docs/ux/role-adaptive-experience.md`. Identifica qué evento inicia el trabajo, quién toma la decisión, de dónde viene cada dato y quién consume la evidencia. Antes de añadir un módulo, comprueba si el registro de arquitectura, la configuración por planta o un módulo existente ya resuelven parte del proceso.
+Diseña la interfaz alrededor del trabajo de cada puesto. Identifica el evento que inicia la tarea, la decisión y las acciones que siguen. Antes de añadir un módulo, comprueba si una capacidad existente o la configuración de planta ya resuelve parte del proceso.
 
-| Área | Entrada para localizar el flujo |
+| Área | Decisión que debe poder tomar el puesto |
 | --- | --- |
-| Operación industrial, mantenimiento, inocuidad y seguridad operativa | Dominio correspondiente en `services/api/app/` y contrato de proceso en `docs/product/`. |
-| Calidad, documentos y gobierno | Sigue el registro fuente, su evidencia y su estado en los dominios de control documental, cumplimiento y gobierno. |
-| Capacitación y constancias | `services/api/app/learning/` y `docs/product/human-resources-learning.md`. Verifica qué material o evaluación habilita la emisión y qué tipo de constancia corresponde. |
-| Salud ocupacional, personal y TI | Parte del dominio que posee el registro. Verifica qué información puede consultar el puesto y qué datos salen de ese dominio. |
-| Web, móvil y escritorio | `apps/web/` comparte la experiencia de aplicación. `desktop/` cubre la integración específica de Electron. |
+| Producción y almacén | Qué orden o lote puede avanzar y qué evidencia exige la siguiente etapa. |
+| Calidad y documentos | Qué versión aplica, quién emite un dictamen y qué registro lo sustenta. |
+| Mantenimiento | Qué equipo requiere intervención, quién recibe la orden y cómo se verifica el cierre. |
+| Capacitación | Qué material o evaluación habilita la acreditación y qué evidencia respalda su emisión. |
 
-- Para una pantalla nueva, respeta la navegación por puesto, la planta activa y el patrón del módulo. Muestra qué falta para tomar una decisión y dónde abrir la evidencia. Comprueba el flujo completo con teclado y en el tamaño de pantalla del puesto. En un diálogo largo, verifica que se pueda llegar a la acción de guardar sin perder el contexto.
-- Reutiliza `apiRequest` cuando aplique el contrato web vigente. Conserva paginación y estados de carga, vacío, error y denegación. Los indicadores deben identificar su periodo, filtros, unidad, fuente y cobertura. Un registro faltante y un valor de cero requieren estados distintos.
-- Mantén los códigos técnicos persistidos y usa la localización de la interfaz para el español de México. Comprueba la regla de fecha del dominio antes de convertir zonas horarias, en especial cuando un valor representa un día civil.
+- Respeta la planta activa y la navegación por puesto. Muestra qué falta para tomar una decisión y dónde abrir la evidencia. Comprueba el flujo con teclado y en el dispositivo del puesto. Si la conexión puede interrumpirse, define cómo distinguir una captura pendiente de una confirmada.
+- Conserva paginación y estados de carga, vacío, error y denegación. Los indicadores deben identificar su periodo, filtros, unidad, fuente y cobertura. Un registro faltante y un valor de cero requieren estados distintos.
+- Separa los códigos técnicos persistidos de las etiquetas que ve el usuario. Define el idioma, las unidades y la zona horaria de cada planta cuando corresponda. Conserva la diferencia entre una fecha civil y el instante de un evento.
 - Para una integración o un asistente, identifica quién tiene autoridad sobre los datos, qué acceso permite el contrato y dónde entra la revisión humana. Distingue una salida de prueba, una lectura real y una acción habilitada. Si se menciona un estándar o requisito, identifica fuente, versión, alcance y validación competente antes de declararlo cubierto.
